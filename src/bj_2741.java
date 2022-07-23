@@ -8,6 +8,9 @@ public class bj_2741 {
         {
             System.out.println(i);
         }
+
+
+
         sc.close();
     }
 }
