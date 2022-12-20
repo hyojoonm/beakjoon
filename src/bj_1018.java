@@ -8,26 +8,16 @@ public class bj_1018 {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
-
-        int x  = Integer.parseInt(st.nextToken());
-
-        int y  = Integer.parseInt(st.nextToken());
-
-        int w  = Integer.parseInt(st.nextToken());
-
-        int h  = Integer.parseInt(st.nextToken());
+        int num = Integer.parseInt(br.readLine());
 
 
-        int ymin = Math.min(y,h-y);
+        String s = br.readLine();
+        char[] array = s.toCharArray();
+        int sum = 0;
 
-        int xmin = Math.min(x,w-x);
-
-        if(ymin<xmin)
-        {
-            System.out.println(ymin);
+        for (int i=0;i<num;i++){
+            sum += array[i] - '0';
         }
-        else
-            System.out.println(xmin);
+        System.out.println(sum);
     }
 }
