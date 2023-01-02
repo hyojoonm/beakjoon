@@ -15,7 +15,7 @@ public class bj_2075 {
 
         StringTokenizer st =null;
 
-        // 우선 순위 큐 선언 오름차순으로 알아서 정렬 함
+        // 우선 순위 큐 선언 내림 차순으로 알아서 정렬 함
         PriorityQueue<Integer> queue = new PriorityQueue<>();
         for (int i = 0; i<n;i++){
             st = new StringTokenizer(br.readLine());
