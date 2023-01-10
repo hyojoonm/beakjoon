@@ -18,7 +18,28 @@ public class bj_11399 {
             arr[i] = Integer.parseInt(st.nextToken());
         }
         // 배열 정렬
-        Arrays.sort(arr);
+//        Arrays.sort(arr);
+
+        for (int i =1;i<n;i++){
+            int point = i;
+            int value = arr[i];
+
+            for (int j = i-1;j>=0;j--){
+                if (arr[j] < arr[i]){
+                    point = j+1;
+                    break;
+                }
+                if (j == 0){
+                    point = 0;
+                }
+            }
+
+            for (int j =i;j>point;j--){
+                arr[j] = arr[j-1];
+            }
+
+            arr[point] = value;
+        }
         int sum = arr[0];
         for (int j = 1; j < arr.length; j++) {
             // 전 사람이 기다린 시간도 더함
