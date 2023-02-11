@@ -51,11 +51,10 @@ public class bj_13023 {
             return;
         }
         vis[i] =true;
-        for (int j : num[i]){
-            if (!vis[i]){
-                dfs(j,depth+1);
+        for (int j : num[i])
+            if (!vis[j]) {
+                dfs(j, depth + 1);
             }
-        }
         vis[i] = false;
     }
 
